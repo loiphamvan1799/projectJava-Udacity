@@ -1,0 +1,36 @@
+# start Docker service
+sudo service docker start
+# Check if the Docker engine is running
+systemctl show --property ActiveState docker
+# Create and run a new Container using the "jenkinsci/blueocean" image
+docker run -u root -d --name myContainer -p 8080:8080 -v jenkins-data:/var/jenkins_home -v /var/run/docker.sock:/var/run/docker.sock -v "$HOME":/home jenkinsci/blueocean
+
+
+//Create an RSA key pair inside the container
+
+
+# Open a shell into myContainer. The container name may vary in your case
+docker exec -it myContainer bash
+# Since our project is a Maven project, we need to install Maven in the container
+apk add maven
+# Generate RSA key-pair. It will generate a public and private key. 
+# We will place the public key in the Github account, and the private key in the Jenkins console
+ssh-keygen -t rsa
+# View the private key
+cat /root/.ssh/id_rsa
+# View the pubic key 
+ cat /root/.ssh/id_rsa.pub
+ 
+# Use the container ID from the command above
+docker logs <conatiner_id>
+
+
+# Stop
+docker stop <container_ID>
+# Remove
+docker container rm <container_ID>
+
+# Open the bash into the container
+docker exec -it myContainer bash
+# View the file password jenkins
+cat /var/jenkins_home/secrets/initialAdminPassword
