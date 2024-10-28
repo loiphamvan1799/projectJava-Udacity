@@ -1,0 +1,30 @@
+2024-07-22 00:57:01.842  INFO 22740 --- [           main] o.h.Version                              : HHH000412: Hibernate Core {5.3.10.Final}
+2024-07-22 00:57:01.845  INFO 22740 --- [           main] o.h.c.Environment                        : HHH000206: hibernate.properties not found
+2024-07-22 00:57:02.125  INFO 22740 --- [           main] o.h.a.c.Version                          : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2024-07-22 00:57:02.789  INFO 22740 --- [           main] o.h.d.Dialect                            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2024-07-22 00:57:03.714  INFO 22740 --- [           main] o.h.t.PojoInstantiator                   : HHH000182: No default (no-argument) constructor for class: com.example.demo.model.persistence.Item (class must be instantiated by Interceptor)
+2024-07-22 00:57:03.967  INFO 22740 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-07-22 00:57:05.432  WARN 22740 --- [           main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-07-22 00:57:05.679  INFO 22740 --- [           main] o.s.s.w.DefaultSecurityFilterChain       : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@48106381, org.springframework.security.web.context.SecurityContextPersistenceFilter@6233c6c2, org.springframework.security.web.header.HeaderWriterFilter@1d1cfe4, org.springframework.web.filter.CorsFilter@3c544c9, org.springframework.security.web.authentication.logout.LogoutFilter@38e00b47, com.example.demo.config.JWTAuthenticationFilter@22e813fc, com.example.demo.config.JWTAuthenticationVerficationFilter@433d93e7, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7e50eeb9, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7858d31d, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@87aec6a, org.springframework.security.web.session.SessionManagementFilter@5a51336a, org.springframework.security.web.access.ExceptionTranslationFilter@32a033b6, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@3982206a]
+2024-07-22 00:57:06.453  INFO 22740 --- [           main] o.s.s.c.ThreadPoolTaskExecutor           : Initializing ExecutorService 'applicationTaskExecutor'
+2024-07-22 00:57:07.096  INFO 22740 --- [           main] c.e.d.SareetaApplicationTests            : Started SareetaApplicationTests in 9.829 seconds (JVM running for 11.811)
+.2024-07-22 00:57:07.499 ERROR 22740 --- [           main] c.e.d.c.UserController                   : Error UserController: Confirmed password does not match
+2024-07-22 00:57:07.505 ERROR 22740 --- [           main] c.e.d.c.UserController                   : Error UserController: password length must be greater than 7.
+..2024-07-22 00:57:07.525  INFO 22740 --- [           main] c.e.d.c.UserController                   : UserController: LoiPV2 is successfully created
+.........2024-07-22 00:57:07.702  INFO 22740 --- [           main] c.e.d.c.OrderController                  : OrderController: Get information Order requests successes for user "LoiPV2"
+.2024-07-22 00:57:07.703 ERROR 22740 --- [           main] c.e.d.c.OrderController                  : Error OrderController: User "LoiPV2" cannot be found
+.2024-07-22 00:57:07.703 ERROR 22740 --- [           main] c.e.d.c.OrderController                  : Error OrderController: User "LoiPV2" cannot be found
+2024-07-22 00:57:07.703  INFO 22740 --- [           main] c.e.d.c.OrderController                  : Error OrderController: Order requests failures for user "LoiPV2"
+.2024-07-22 00:57:07.704  INFO 22740 --- [           main] c.e.d.c.OrderController                  : OrderController: Order requests successes for user "LoiPV2"
+
+Time: 0.49
+
+OK (15 tests)
+
+Finished. Result: Failures: 0. Ignored: 0. Tests run: 15. Time: 490ms.
+2024-07-22 00:57:07.717  INFO 22740 --- [       Thread-3] o.s.s.c.ThreadPoolTaskExecutor           : Shutting down ExecutorService 'applicationTaskExecutor'
+2024-07-22 00:57:07.721  INFO 22740 --- [       Thread-3] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-07-22 00:57:07.726  INFO 22740 --- [       Thread-3] c.z.h.HikariDataSource                   : HikariPool-1 - Shutdown initiated...
+2024-07-22 00:57:07.733  INFO 22740 --- [       Thread-3] c.z.h.HikariDataSource                   : HikariPool-1 - Shutdown completed.
+
+Process finished with exit code 0
